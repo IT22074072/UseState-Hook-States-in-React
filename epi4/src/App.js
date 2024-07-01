@@ -2,6 +2,21 @@ import "./App.css";
 import { useState } from "react"; //to create a state(for the state management)
 
 function App() {
+  const [showText, setShowText] = useState(true);
+  
+  return (
+    <div className="app">
+
+      <button onClick={() => setShowText(!showText)}>Show/Hide</button>
+      {showText  && <h1>My name is Dinithi</h1> }
+      
+    </div>
+  );
+}
+
+
+/*
+function App() {
   const [inputValue, setInputValue] = useState("");
 
 
@@ -17,6 +32,8 @@ function App() {
     </div>
   );
 }
+*/
+
 
 /*
 function App() {
