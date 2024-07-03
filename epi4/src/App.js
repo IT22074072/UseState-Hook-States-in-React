@@ -2,6 +2,34 @@ import "./App.css";
 import { useState } from "react"; //to create a state(for the state management)
 
 function App() {
+  const [count, setCount] = useState(0);
+
+
+  const increase=()=>{
+    setCount(count + 1);
+  }
+
+  const decrease=()=>{
+    setCount(count-1);
+  }
+
+  const setToZero=()=>{
+    setCount(0);
+  }
+
+
+  return (
+    <div className="app">
+      <button onClick={increase}>Increase</button>
+      <button onClick={decrease}>Decrease</button>
+      <button onClick={setToZero}>Set to zero</button> &nbsp;&nbsp;&nbsp;
+      {count}
+    </div>
+  );
+}
+
+/*
+function App() {
   const [textColor, setTextColor] = useState("black");
   
   return (
@@ -17,7 +45,7 @@ function App() {
     </div>
   );
 }
-
+*/
 
 /*
 function App() {
@@ -65,7 +93,6 @@ function App() {
   );
 }
 */
-
 
 /*
 function App() {
